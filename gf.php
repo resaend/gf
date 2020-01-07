@@ -82,17 +82,15 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
     $fopen1 = fopen($live, "a+");
 
-    $fwrite1 = fwrite($fopen1, "TOKEN => ".$token." \n NOMOR => ".$number." \n");
+    $fwrite1 = fwrite($fopen1, "\n Waktu : ".date("d/m/Y h:i:s")."\n Token : ".$token." \n No Hp : ".$number."\n ======================================= ");
 
     fclose($fopen1);
 
     echo "[+] File Token tersimpan di ".$live." \n";
 
-    echo "[+] Proses Redeem Voucher GOFOOD 20k + 10k\n";
-
 				$data3 = '{"promo_code":"0"}';
 
-					echo " Proses redeem telah selesai\n";
+					echo "[+] Selesai create akun atas nama ".$nama;
 
 					sleep(0);
 
@@ -128,7 +126,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
 	// $rand = json_decode($rnd_get, true);
 
-	preg_match_all('~(&bull; (.*?)<br/>&bull; )~', $ex, $name);
+	preg_match_all('(&bull; (.*?)<br/>&bull; )', $ex, $name);
 
 	return $name[2][mt_rand(0, 14) ];
 
@@ -179,7 +177,3 @@ function curl($url, $fields = null, $headers = null)
         );
 
 	}
-
-    
-
-    
