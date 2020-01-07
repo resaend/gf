@@ -6,7 +6,7 @@ $headers[] = 'Content-Type: application/json';
 $headers[] = 'X-AppVersion: 3.27.0';
 $headers[] = "X-Uniqueid: ac94e5d0e7f3f".rand(111,999);
 $headers[] = 'X-Location: -6.405821,106.064193';
-		echo "===========================\n";		echo " Auto redeem voucher GOJEK \n";
+		echo "===========================\n";		echo " Auto create account gojek \n";
 		echo "===========================\n";
 		echo "[+] Masukkan Nomor : ";
 		$number = trim(fgets(STDIN));
@@ -18,7 +18,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 			$number = preg_replace("/[^0-9]/", "",$number);
 			$number = "1".$number;
 		}
-		echo "[+] Masukkan Nama : ";
+		echo "[+] Masukkan Nama  : ";
 		$nama = trim(fgets(STDIN));
 		$email = strtolower(str_replace(" ", "", $nama) . mt_rand(100,999) . "@gmail.com");
 		$data1 = '{"name":"' . $nama . '","email":"' . $email . '","phone":"+' . $number . '","signed_up_country":"ID"}';
